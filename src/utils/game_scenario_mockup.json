@@ -1,0 +1,47 @@
+{
+  "name": "Тестовая игра",
+  "mode": "individual",
+  "type": "ladder",
+  "ladder": {
+    "ladder_name": ["First", "Second", "Third", "Fourth"],
+    "point_to_step": 1
+  },
+  "transfer_count": 0,
+  "start_point_value": 1,
+  "player_count": 2,
+  "rounds": 2,
+  "questions": {
+    "round_1": [
+        {
+          "number": 1,
+          "text": "Сколько у вас глаз?",
+          "test": "",
+          "answer": "Два",
+          "point_cost": 1
+        },
+      {
+        "number": 2,
+        "text": "Апельсин оранжевого цвета?",
+        "test": "",
+        "answer": "Да",
+        "point_cost": 1
+      }
+    ],
+    "round_2": [
+      {
+        "number": "3",
+        "text": "Какого цвета небо?",
+        "test": "",
+        "answer": "Синего",
+        "point_cost": 1
+      },
+      {
+        "number": "4",
+        "text": "Солнце вращается вокруг земли?",
+        "test": "",
+        "answer": "Нет",
+        "point_cost": 1
+      }
+    ]
+  }
+}

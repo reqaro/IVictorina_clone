@@ -1,0 +1,81 @@
+{
+  "name": "irlix_victoriinna",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@bem-react/classname": "^1.5.12",
+    "@chakra-ui/react": "^2.3.6",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@reduxjs/toolkit": "^1.8.6",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "electron-is-dev": "^2.0.0",
+    "framer-motion": "^7.6.1",
+    "path": "^0.12.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.4",
+    "react-router-dom": "^6.4.2",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.55.0"
+  },
+  "main": "./src/electron/main.js",
+  "productName": "IRLIX ВикторИИнна",
+  "homepage": "./",
+  "scripts": {
+    "dev": "electron ./src/electron/main.js",
+    "build": "react-scripts build",
+    "start_o": "export BROWSER=none && react-scripts start",
+    "start_w": "set BROWSER=none && react-scripts start",
+    "electron-dev-o": "ELECTRON_START_URL=http://localhost:3000 electron .",
+    "electron-dev-w": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
+    "build-electron-o": "mkdir build/electron && cp -r src/electron/. build/electron",
+    "build-electron-w": "mkdir build\\electron && robocopy src/electron build\\electron /S",
+    "electron": "electron .",
+    "package-w": "electron-builder build --win -c.extraMetadata.main=build/electron/main.js --publish never",
+    "package-l": "electron-builder build --linux -c.extraMetadata.main=build/electron/main.js --publish never",
+    "package-m": "electron-builder build --mac -c.extraMetadata.main=build/electron/main.js --publish never"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^21.1.0",
+    "electron-builder": "^23.6.0",
+    "eslint": "^8.25.0",
+    "eslint-plugin-react": "^7.31.10"
+  },
+  "build": {
+    "win": {
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "icon": "build/icon.png"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "publish": {
+      "provider": "github",
+      "repo": "irlix-project",
+      "owner": "Egor"
+    }
+  }
+}

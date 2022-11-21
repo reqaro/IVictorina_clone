@@ -1,0 +1,30 @@
+//@import "./reset";
+
+html {
+  min-height: 100%;
+  max-height: fit-content;
+  font-size: 8px;
+}
+
+body {
+  min-height: 100%;
+  max-height: fit-content;
+  font-size: 12px;
+  & main {
+    height: 100%;
+  }
+}
+
+//.main-frame {
+//  min-height: 100%;
+//  max-height: fit-content;
+//  padding: 1rem;
+//  background-color: #056f6f;
+//
+//  &__work-area {
+//    min-height: 100%;
+//    max-height: fit-content;
+//    border-radius: 1rem;
+//    background-color: #ffe3d2;
+//  }
+//}

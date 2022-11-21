@@ -1,0 +1,1 @@
+export {StatusOfTheGame} from './StatusOfTheGame'
